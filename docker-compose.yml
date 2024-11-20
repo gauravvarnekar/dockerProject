@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5000"  # Local port 5001 maps to the container's 5000 port
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+

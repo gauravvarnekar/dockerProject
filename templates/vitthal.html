@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Vitthal: The Divine Protector</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/vitthal">Vitthal</a>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <h2>Vitthal, The Beloved God of Maharashtra</h2>
+            <img id="vitthal-img" src="/static/images/vitthal.jpg" alt="Vitthal Image" class="vitthal-image">
+        </section>
+        
+        <section class="description">
+            <h3>Who is Vitthal?</h3>
+            <p>
+                Vitthal, also known as Vithoba or Panduranga, is a popular deity in Maharashtra, India. He is considered a form of Lord Vishnu, and his worship is especially prominent in the Bhakti tradition. Vitthal is often depicted as standing on a brick, signifying humility and devotion. His temple in Pandharpur is one of the most visited pilgrimage sites in India.
+            </p>
+            <p>
+                The deity is revered for his compassion, and his devotees, especially those in Maharashtra and surrounding states, sing devotional songs called 'abhangas' to express their love and devotion.
+            </p>
+        </section>
+
+        <section class="devotional-songs">
+            <h3>Devotional Songs and Abhangas</h3>
+            <p>Vitthal's followers sing songs of devotion to him, many of which are composed by the famous saints like Sant Tukaram and Sant Dnyaneshwar. These songs are filled with praise and love for Vitthal, embodying the purest form of devotion.</p>
+            
+            <button id="songBtn" onclick="playSong()">Play Devotional Song</button>
+            
+            <!-- Audio Player (Autoplay enabled) -->
+            <audio id="devotionalSong" src="/static/audio/devotional_song.mp3" preload="auto" autoplay></audio>
+        </section>
+    </main>
+    <footer>
+        <p>Follow us:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </footer>
+
+    <script>
+        function playSong() {
+            const audio = document.getElementById('devotionalSong');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        document.getElementById("vitthal-img").onclick = function() {
+            var imgWindow = window.open("", "_blank");
+            imgWindow.document.write('<img src="' + this.src + '" style="width:100%;">');
+        }
+    </script>
+</body>
+</html>
+
